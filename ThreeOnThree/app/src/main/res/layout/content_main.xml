@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="stats.myapplication.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!--<TableLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginTop="20dp">-->
+        <!--<TableRow-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="P1"-->
+                <!--android:id="@+id/textViewT1P1"-->
+                <!--android:layout_marginLeft="23dp"-->
+                <!--android:layout_marginStart="23dp"-->
+                <!--/>-->
+        <!--</TableRow>-->
+        <!--<TableRow-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content">-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text=""-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:text="FG Att (2)"-->
+                <!--android:id="@+id/textViewFGA2T1P1"-->
+                <!--android:layout_toRightOf="@+id/textViewT1P1"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+                <!--android:text="    "-->
+                <!--/>-->
+            <!--<Button-->
+                <!--style="?android:attr/buttonStyleSmall"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="+"-->
+                <!--android:id="@+id/buttonFGA2PlusT1P1"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:layout_width="50dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+                <!--android:text="0"-->
+                <!--android:id="@+id/textViewPFGATotalT1P1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="#5c0404" />-->
+            <!--<Button-->
+                <!--style="?android:attr/buttonStyleSmall"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="-"-->
+                <!--android:id="@+id/buttonFGM2MinusT1P1"-->
+                <!--android:layout_column="2"-->
+                <!--android:onClick="incrementTotalByOne"-->
+                <!--/>-->
+        <!--</TableRow>-->
+
+        <!--<TableRow-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+
+        <!--</TableRow>-->
+    <!--</TableLayout>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="STATS"-->
+        <!--android:id="@+id/textView2" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Team One"-->
+        <!--android:id="@+id/textViewTeamOne"-->
+        <!--android:layout_below="@+id/textView2"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="22dp" />-->
+
+
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text="Points"-->
+        <!--android:id="@+id/textViewPoints"-->
+        <!--android:layout_below="@+id/textViewT1P1"-->
+        <!--android:layout_toRightOf="@+id/textViewT1P1"-->
+        <!--android:layout_toEndOf="@+id/textViewT1P1" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text="Assists"-->
+        <!--android:id="@+id/textView"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignLeft="@+id/textViewPoints"-->
+        <!--android:layout_alignStart="@+id/textViewPoints" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text="Rebounds"-->
+        <!--android:id="@+id/textView3"-->
+        <!--android:layout_below="@+id/textView"-->
+        <!--android:layout_alignLeft="@+id/textViewPoints" />-->
+
+
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text="FG Made (2)"-->
+        <!--android:id="@+id/textViewFGM2T1P1"-->
+        <!--android:layout_below="@+id/textViewFGA2T1P1"-->
+        <!--android:layout_toRightOf="@+id/textViewTeamOne"-->
+        <!--android:layout_toEndOf="@+id/textViewTeamOne" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text="FG Att (3)"-->
+        <!--android:id="@+id/textViewFGA3T1P1"-->
+        <!--android:layout_below="@+id/textViewFGM2T1P1"-->
+        <!--android:layout_toRightOf="@+id/textViewTeamOne"-->
+        <!--android:layout_toEndOf="@+id/textViewTeamOne" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text="FG Made (3)"-->
+        <!--android:id="@+id/textViewFGM3T1P1"-->
+        <!--android:layout_below="@+id/textViewFGA3T1P1"-->
+        <!--android:layout_toRightOf="@+id/textViewTeamOne" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text="FT Att"-->
+        <!--android:id="@+id/textViewFTAT1P1"-->
+        <!--android:layout_below="@+id/textViewFGM3T1P1"-->
+        <!--android:layout_alignLeft="@+id/textViewFGM3T1P1"-->
+        <!--android:layout_alignStart="@+id/textViewFGM3T1P1" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+        <!--android:text="FT Made"-->
+        <!--android:id="@+id/textViewFTMT1P1"-->
+        <!--android:layout_below="@+id/textViewFTAT1P1"-->
+        <!--android:layout_alignLeft="@+id/textViewFGM3T1P1" />-->
+
+    <!-- ###################################BUTTONS######################################### -->
+
+
+
+
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="+"-->
+        <!--android:id="@+id/buttonFGA2PlusT1P1"-->
+        <!--android:layout_above="@+id/buttonFGA3PlusT1P1"-->
+        <!--android:layout_alignLeft="@+id/buttonFMA2PlusT1P1"-->
+        <!--android:layout_alignStart="@+id/buttonFMA2PlusT1P1" />-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="+"-->
+        <!--android:id="@+id/buttonFGA3PlusT1P1"-->
+        <!--android:layout_above="@+id/buttonFGM3PlusT1P1"-->
+        <!--android:layout_alignLeft="@+id/buttonFGA2PlusT1P1"-->
+        <!--android:layout_alignStart="@+id/buttonFGA2PlusT1P1" />-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="+"-->
+        <!--android:id="@+id/buttonFGM3PlusT1P1"-->
+        <!--android:layout_above="@+id/buttonFTAPlusT1P1"-->
+        <!--android:layout_alignLeft="@+id/buttonFGA3PlusT1P1"-->
+        <!--android:layout_alignStart="@+id/buttonFGA3PlusT1P1" />-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="+"-->
+        <!--android:id="@+id/buttonFTAPlusT1P1"-->
+        <!--android:layout_below="@+id/textView3"-->
+        <!--android:layout_alignLeft="@+id/buttonFGM3PlusT1P1"-->
+        <!--android:layout_alignStart="@+id/buttonFGM3PlusT1P1" />-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="+"-->
+        <!--android:id="@+id/buttonFTMPlusT1P1"-->
+        <!--android:layout_below="@+id/buttonFTAPlusT1P1"-->
+        <!--android:layout_alignLeft="@+id/buttonFTAPlusT1P1"-->
+        <!--android:layout_alignStart="@+id/buttonFTAPlusT1P1" />-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="-"-->
+        <!--android:id="@+id/buttonFGA2MinusT1P1"-->
+        <!--android:layout_alignTop="@+id/buttonFMA2PlusT1P1"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true" />-->
+
+
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="-"-->
+        <!--android:id="@+id/buttonFGA3MinusT1P1"-->
+        <!--android:layout_below="@+id/buttonFGM2MinusT1P1"-->
+        <!--android:layout_alignParentRight="true" />-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="-"-->
+        <!--android:id="@+id/buttonFGM3MinusT1P1"-->
+        <!--android:layout_below="@+id/buttonFGA3MinusT1P1"-->
+        <!--android:layout_alignParentRight="true" />-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="-"-->
+        <!--android:id="@+id/buttonFTAMinusT1P1"-->
+        <!--android:layout_below="@+id/buttonFGM3MinusT1P1"-->
+        <!--android:layout_alignParentRight="true" />-->
+
+    <!--<Button-->
+        <!--style="?android:attr/buttonStyleSmall"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="-"-->
+        <!--android:id="@+id/buttonFTMMinusT1P1"-->
+        <!--android:layout_below="@+id/buttonFTAMinusT1P1"-->
+        <!--android:layout_alignParentRight="true" />-->
+    <!--&lt;!&ndash;android:layout_marginLeft="1dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginStart="21dp"&ndash;&gt;-->
+        <!--android:layout_above="@+id/textViewFGM2T1P1" />-->
+
+</RelativeLayout>
