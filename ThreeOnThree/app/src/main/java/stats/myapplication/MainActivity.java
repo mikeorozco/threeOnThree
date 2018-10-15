@@ -9,6 +9,8 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 public class MainActivity extends AppCompatActivity {
 
     int current2PtAttempts = 0;
@@ -17,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     int current3PtMade = 0;
     int currentFTAttempts = 0;
     int currentFTMade = 0;
+    int totalPoints = 0;
 
     private final String TAG = "MainActivity class";
     @Override
@@ -57,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 current2PtMade += 1;
                 madeTV.setText(Integer.toString(current2PtMade));
+                calcTotalPoints();
             }
         });
 
@@ -69,6 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 current2PtMade -= 1;
                 madeTV.setText(Integer.toString(current2PtMade));
+                calcTotalPoints();
             }
         });
 //---------------------------------------------------------------------------------
@@ -102,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 current3PtMade += 1;
                 madeTV.setText(Integer.toString(current3PtMade));
+                calcTotalPoints();
             }
         });
 
@@ -113,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 current3PtMade -= 1;
                 madeTV.setText(Integer.toString(current3PtMade));
+                calcTotalPoints();
             }
         });
 
@@ -147,6 +154,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 currentFTMade += 1;
                 madeTV.setText(Integer.toString(currentFTMade));
+                calcTotalPoints();
             }
         });
 
@@ -158,10 +166,17 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 currentFTMade -= 1;
                 madeTV.setText(Integer.toString(currentFTMade));
+                calcTotalPoints();
             }
         });
     }
 
+    private void calcTotalPoints() {
+        int totalPoints = 0;
+        totalPoints = (current2PtMade * 2) + (current3PtMade * 3) + currentFTMade;
+        TextView totalPointsField = (TextView) findViewById(R.id.textViewTotalPointsT1P1);
+        totalPointsField.setText(Integer.toString(totalPoints));
+    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
