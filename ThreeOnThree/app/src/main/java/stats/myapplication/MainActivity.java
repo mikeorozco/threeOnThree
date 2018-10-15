@@ -13,6 +13,9 @@ public class MainActivity extends AppCompatActivity {
 
     int current2PtAttempts = 0;
     int current2PtMade = 0;
+    int current3PtAttempts = 0;
+    int current3PtMade = 0;
+
     private final String TAG = "MainActivity class";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         Button fga2PlusT1P1 = (Button) findViewById(R.id.buttonFGA2PlusT1P1);
         fga2PlusT1P1.setOnClickListener(new View.OnClickListener() {
 
-            TextView attemptsTV = (TextView) findViewById(R.id.textViewFGATotalT1P1);
+            TextView attemptsTV = (TextView) findViewById(R.id.textViewFGA2TotalT1P1);
 
             public void onClick(View v) {
                 current2PtAttempts += 1;
@@ -36,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         Button fga2MinusT1P1 = (Button) findViewById(R.id.buttonFGA2MinusT1P1);
         fga2MinusT1P1.setOnClickListener(new View.OnClickListener() {
 
-            TextView attemptsTV = (TextView) findViewById(R.id.textViewFGATotalT1P1);
+            TextView attemptsTV = (TextView) findViewById(R.id.textViewFGA2TotalT1P1);
 
             public void onClick(View v) {
                 current2PtAttempts -= 1;
@@ -47,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
         Button fgm2PlusT1P1 = (Button) findViewById(R.id.buttonFGM2PlusT1P1);
         fgm2PlusT1P1.setOnClickListener(new View.OnClickListener() {
 
-            TextView madeTV = (TextView) findViewById(R.id.textViewFGMTotalT1P1);
-            public void onClick( View v) {
+            TextView madeTV = (TextView) findViewById(R.id.textViewFGM2TotalT1P1);
+
+            public void onClick(View v) {
                 current2PtMade += 1;
                 madeTV.setText(Integer.toString(current2PtMade));
             }
@@ -58,10 +62,55 @@ public class MainActivity extends AppCompatActivity {
         Button fgm2MinusT1P1 = (Button) findViewById(R.id.buttonFGM2MinusT1P1);
         fgm2MinusT1P1.setOnClickListener(new View.OnClickListener() {
 
-            TextView madeTV = (TextView) findViewById(R.id.textViewFGMTotalT1P1);
-            public void onClick( View v) {
+            TextView madeTV = (TextView) findViewById(R.id.textViewFGM2TotalT1P1);
+
+            public void onClick(View v) {
                 current2PtMade -= 1;
                 madeTV.setText(Integer.toString(current2PtMade));
+            }
+        });
+
+        Button fga3PlusT1P1 = (Button) findViewById(R.id.buttonFGA3PlusT1P1);
+        fga3PlusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView attemptsTV = (TextView) findViewById(R.id.textViewFGA3TotalT1P1);
+
+            public void onClick(View v) {
+                current3PtAttempts += 1;
+                attemptsTV.setText(Integer.toString(current3PtAttempts));
+            }
+        });
+
+
+        Button fga3MinusT1P1 = (Button) findViewById(R.id.buttonFGA3MinusT1P1);
+        fga3MinusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView attemptsTV = (TextView) findViewById(R.id.textViewFGA3TotalT1P1);
+
+            public void onClick(View v) {
+                current3PtAttempts -= 1;
+                attemptsTV.setText(Integer.toString(current3PtAttempts));
+            }
+        });
+
+        Button fgm3PlusT1P1 = (Button) findViewById(R.id.buttonFGM3PlusT1P1);
+        fgm3PlusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView madeTV = (TextView) findViewById(R.id.textViewFGM3TotalT1P1);
+            public void onClick( View v) {
+                current3PtMade += 1;
+                madeTV.setText(Integer.toString(current3PtMade));
+            }
+        });
+
+
+        Button fgm3MinusT1P1 = (Button) findViewById(R.id.buttonFGM3MinusT1P1);
+        fgm3MinusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView madeTV = (TextView) findViewById(R.id.textViewFGM3TotalT1P1);
+            public void onClick( View v) {
+                current3PtMade -= 1;
+                madeTV.setText(Integer.toString(current3PtMade));
             }
         });
     }
