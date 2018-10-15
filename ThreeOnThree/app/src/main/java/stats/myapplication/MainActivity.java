@@ -9,11 +9,10 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
-import android.util.Log;
-
 public class MainActivity extends AppCompatActivity {
 
-    int myCurrentAttempts =0;
+    int current2PtAttempts = 0;
+    int current2PtMade = 0;
     private final String TAG = "MainActivity class";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +25,10 @@ public class MainActivity extends AppCompatActivity {
         fga2PlusT1P1.setOnClickListener(new View.OnClickListener() {
 
             TextView attemptsTV = (TextView) findViewById(R.id.textViewFGATotalT1P1);
-//            int currentAttempts = Integer.parseInt(attemptsTV.getText().toString());
-            public void onClick( View v) {
-//                currentAttempts += 1;
-                myCurrentAttempts += 1;//currentAttempts;
-                attemptsTV.setText(Integer.toString(myCurrentAttempts));
+
+            public void onClick(View v) {
+                current2PtAttempts += 1;
+                attemptsTV.setText(Integer.toString(current2PtAttempts));
             }
         });
 
@@ -39,11 +37,31 @@ public class MainActivity extends AppCompatActivity {
         fga2MinusT1P1.setOnClickListener(new View.OnClickListener() {
 
             TextView attemptsTV = (TextView) findViewById(R.id.textViewFGATotalT1P1);
-            int currentAttempts = Integer.parseInt(attemptsTV.getText().toString());
+
+            public void onClick(View v) {
+                current2PtAttempts -= 1;
+                attemptsTV.setText(Integer.toString(current2PtAttempts));
+            }
+        });
+
+        Button fgm2PlusT1P1 = (Button) findViewById(R.id.buttonFGM2PlusT1P1);
+        fgm2PlusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView madeTV = (TextView) findViewById(R.id.textViewFGMTotalT1P1);
             public void onClick( View v) {
-//                currentAttempts -= 1;
-                myCurrentAttempts -= 1;//currentAttempts;
-                attemptsTV.setText(Integer.toString(myCurrentAttempts));
+                current2PtMade += 1;
+                madeTV.setText(Integer.toString(current2PtMade));
+            }
+        });
+
+
+        Button fgm2MinusT1P1 = (Button) findViewById(R.id.buttonFGM2MinusT1P1);
+        fgm2MinusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView madeTV = (TextView) findViewById(R.id.textViewFGMTotalT1P1);
+            public void onClick( View v) {
+                current2PtMade -= 1;
+                madeTV.setText(Integer.toString(current2PtMade));
             }
         });
     }
@@ -69,30 +87,4 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
-//item    public void incrementTotalByOne(View view) {
-//
-//        TextView attemptsField = (TextView) findViewById(R.id.textViewPFGATotalT1P1);
-//        int currentAttempts = Integer.parseInt(attemptsField.getText().toString());
-//
-//        attemptsField.setText(currentAttempts + 1);
-//
-//        EditText milestoDestField = (EditText) findViewById(R.id.milesLeftET);
-//        EditText speedField = (EditText) findViewById(R.id.speedET);
-//
-//
-//        Double miles = Double.parseDouble(milestoDestField.getText().toString());
-//        Double spd = Double.parseDouble(speedField.getText().toString());
-//
-//        Double timeLeft = miles / spd;
-//
-//        int minutesLeft = (int) ((timeLeft % 1) * 60) ;
-//        int hoursLeft = (int) (timeLeft - (timeLeft % 1));
-//
-//
-//
-//        Toast.makeText(getApplicationContext(), hoursLeft + " hours, " + minutesLeft + " minutes left", Toast.LENGTH_LONG).show();
-//    }
-
 }
