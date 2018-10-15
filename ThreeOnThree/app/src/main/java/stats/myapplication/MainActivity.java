@@ -15,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     int current2PtMade = 0;
     int current3PtAttempts = 0;
     int current3PtMade = 0;
+    int currentFTAttempts = 0;
+    int currentFTMade = 0;
 
     private final String TAG = "MainActivity class";
     @Override
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 madeTV.setText(Integer.toString(current2PtMade));
             }
         });
-
+//---------------------------------------------------------------------------------
         Button fga3PlusT1P1 = (Button) findViewById(R.id.buttonFGA3PlusT1P1);
         fga3PlusT1P1.setOnClickListener(new View.OnClickListener() {
 
@@ -111,6 +113,51 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 current3PtMade -= 1;
                 madeTV.setText(Integer.toString(current3PtMade));
+            }
+        });
+
+//---------------------------------------------------------------------------------
+        Button ftaPlusT1P1 = (Button) findViewById(R.id.buttonFTAPlusT1P1);
+        ftaPlusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView attemptsTV = (TextView) findViewById(R.id.textViewFTATotalT1P1);
+
+            public void onClick(View v) {
+                currentFTAttempts += 1;
+                attemptsTV.setText(Integer.toString(currentFTAttempts));
+            }
+        });
+
+
+        Button ftaMinusT1P1 = (Button) findViewById(R.id.buttonFTAMinusT1P1);
+        ftaMinusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView attemptsTV = (TextView) findViewById(R.id.textViewFTATotalT1P1);
+
+            public void onClick(View v) {
+                currentFTAttempts -= 1;
+                attemptsTV.setText(Integer.toString(currentFTAttempts));
+            }
+        });
+
+        Button ftmPlusT1P1 = (Button) findViewById(R.id.buttonFTMPlusT1P1);
+        ftmPlusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView madeTV = (TextView) findViewById(R.id.textViewFTMTotalT1P1);
+            public void onClick( View v) {
+                currentFTMade += 1;
+                madeTV.setText(Integer.toString(currentFTMade));
+            }
+        });
+
+
+        Button ftmMinusT1P1 = (Button) findViewById(R.id.buttonFTMMinusT1P1);
+        ftmMinusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView madeTV = (TextView) findViewById(R.id.textViewFTMTotalT1P1);
+            public void onClick( View v) {
+                currentFTMade -= 1;
+                madeTV.setText(Integer.toString(currentFTMade));
             }
         });
     }
