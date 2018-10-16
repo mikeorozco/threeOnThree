@@ -21,12 +21,12 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <!--<include layout="@layout/content_main" />-->
-
+    <!-- Main Table-->
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="75dp">
+        <!-- Player One Header-->
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -55,224 +55,363 @@
                 android:id="@+id/textViewTotalPointsT1P1"
                 android:textColor="#5c0404" />
         </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" FG Att (2pt)"
-                android:id="@+id/textViewFGA2T1P1"
-                />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/buttonFGA2PlusT1P1"
-                />
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="0"
-                android:id="@+id/textViewFGA2TotalT1P1"
-                android:textAlignment="center"
-                android:textColor="#5c0404" />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/buttonFGA2MinusT1P1"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="    "
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" FG Made (2pt)"
-                android:id="@+id/textViewFGM2T1P1"
-                android:background="#e41d1d"
-                android:textColor="#ffffff"
-                />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/buttonFGM2PlusT1P1"
-                android:textColor="#ffffff"
-                android:backgroundTint="#e41d1d" />
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="0"
-                android:id="@+id/textViewFGM2TotalT1P1"
-                android:textAlignment="center"
-                android:textColor="#5c0404"
-                android:autoText="false" />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/buttonFGM2MinusT1P1"
-                android:textColor="#ffffff"
-                android:singleLine="false"
-                android:backgroundTint="#e41d1d" />
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" FG Att (3pt)"
-                android:id="@+id/textViewFGA3T1P1"
-                />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/buttonFGA3PlusT1P1"
-                />
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="0"
-                android:id="@+id/textViewFGA3TotalT1P1"
-                android:textAlignment="center"
-                android:textColor="#5c0404" />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/buttonFGA3MinusT1P1"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="    "
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" FG Made (3pt)"
-                android:id="@+id/textViewFGM3T1P1"
-                android:background="#e41d1d"
-                android:textColor="#ffffff"
-                />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/buttonFGM3PlusT1P1"
-                android:textColor="#ffffff"
-                android:backgroundTint="#e41d1d" />
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="0"
-                android:id="@+id/textViewFGM3TotalT1P1"
-                android:textAlignment="center"
-                android:textColor="#5c0404" />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/buttonFGM3MinusT1P1"
-                android:textColor="#ffffff"
-                android:backgroundTint="#e41d1d" />
-        </TableRow>
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" FT Att"
-                android:id="@+id/textViewFTAT1P1"
-                />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/buttonFTAPlusT1P1"
-                />
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="0"
-                android:id="@+id/textViewFTATotalT1P1"
-                android:textAlignment="center"
-                android:textColor="#5c0404" />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/buttonFTAMinusT1P1"
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="    "
-                />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text=" FT Made"
-                android:id="@+id/textViewFTMT1P1"
-                android:autoText="false"
-                android:background="#e41d1d"
-                android:textColor="#ffffff"
-                />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+"
-                android:id="@+id/buttonFTMPlusT1P1"
-                android:textColor="#ffffff"
-                android:backgroundTint="#e41d1d" />
-            <TextView
-                android:layout_width="50dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="0"
-                android:id="@+id/textViewFTMTotalT1P1"
-                android:textAlignment="center"
-                android:textColor="#5c0404" />
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-"
-                android:id="@+id/buttonFTMMinusT1P1"
-                android:textColor="#ffffff"
-                android:backgroundTint="#e41d1d" />
+
+        <!-- Player One Stats Row-->
+        <TableRow>
+
+            <!-- Left Table-->
+            <TableLayout android:layout_width="wrap_content">
+                <!-- 2pt Att-->
+                <TableRow android:background="#ebbebe">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" FG Att (2pt)"
+                        android:id="@+id/textViewFGA2T1P1"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonFGA2PlusT1P1"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewFGA2TotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonFGA2MinusT1P1"
+                        />
+                </TableRow>
+                <!-- 3pt Att-->
+                <TableRow android:background="#ebbebe">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" FG Att (3pt)"
+                        android:id="@+id/textViewFGA3T1P1"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonFGA3PlusT1P1"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewFGA3TotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonFGA3MinusT1P1"
+                        />
+                </TableRow>
+                <!-- FT Att-->
+                <TableRow android:background="#ebbebe">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" FT Att"
+                        android:id="@+id/textViewFTAT1P1"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonFTAPlusT1P1"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewFTATotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonFTAMinusT1P1"
+                        />
+                </TableRow>
+                <!-- Assists-->
+                <TableRow android:background="#c3acac">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" Assists"
+                        android:id="@+id/textViewAssistsT1P1"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonAssistsPlusT1P1"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewAssistsTotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonAssistsMinusT1P1"
+                        />
+                </TableRow>
+                <!-- Rebounds-->
+                <TableRow android:background="#948383">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" Rebounds"
+                        android:id="@+id/textViewReboundsT1P1"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonReboundsPlusT1P1"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewReboundsTotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonReboundsMinusT1P1"
+                        />
+                </TableRow>
+            </TableLayout>
+
+            <Space
+                android:layout_width="20px"
+                android:layout_height="20px"
+                android:layout_column="1"
+                android:layout_span="3"
+                android:clickable="false" />
+
+            <!-- Right Table-->
+            <TableLayout
+                android:layout_width="wrap_content">
+                <!-- 2pt Made-->
+                <TableRow android:background="#ebbebe">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" FG Made (2pt)"
+                        android:id="@+id/textViewFGM2T1P1"
+                        android:background="#e41d1d"
+                        android:textColor="#ffffff"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonFGM2PlusT1P1"
+                        android:backgroundTint="#e41d1d" />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewFGM2TotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404"
+                        android:autoText="false" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonFGM2MinusT1P1"
+                        android:singleLine="false"
+                        android:backgroundTint="#e41d1d" />
+                </TableRow>
+                <!-- 3pt Made-->
+                <TableRow android:background="#ebbebe">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" FG Made (3pt)"
+                        android:id="@+id/textViewFGM3T1P1"
+                        android:background="#e41d1d"
+                        android:textColor="#ffffff"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonFGM3PlusT1P1"
+                        android:backgroundTint="#e41d1d" />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewFGM3TotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonFGM3MinusT1P1"
+                        android:backgroundTint="#e41d1d" />
+                </TableRow>
+                <!-- FT Made-->
+                <TableRow android:background="#ebbebe">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" FT Made"
+                        android:id="@+id/textViewFTMT1P1"
+                        android:autoText="false"
+                        android:background="#e41d1d"
+                        android:textColor="#ffffff"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonFTMPlusT1P1"
+                        android:backgroundTint="#e41d1d"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewFTMTotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonFTMMinusT1P1"
+                        android:backgroundTint="#e41d1d" />
+                </TableRow>
+                <!-- Blocks-->
+                <TableRow android:background="#c3acac">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" Blocks"
+                        android:id="@+id/textViewBlocksT1P1"
+                        android:autoText="false"
+                        android:background="#e41d1d"
+                        android:textColor="#ffffff"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonBlocksPlusT1P1"
+                        android:backgroundTint="#e41d1d"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewBlocksTotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonBlocksMinusT1P1"
+                        android:backgroundTint="#e41d1d" />
+                </TableRow>
+                <!-- Steals-->
+                <TableRow android:background="#948383">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text=" Steals"
+                        android:id="@+id/textViewStealsT1P1"
+                        android:autoText="false"
+                        android:background="#e41d1d"
+                        android:textColor="#ffffff"
+                        />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:id="@+id/buttonStealsPlusT1P1"
+                        android:backgroundTint="#e41d1d"
+                        />
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:text="0"
+                        android:id="@+id/textViewStealsTotalT1P1"
+                        android:textAlignment="center"
+                        android:textColor="#5c0404" />
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="-"
+                        android:id="@+id/buttonStealsMinusT1P1"
+                        android:backgroundTint="#e41d1d" />
+                </TableRow>
+            </TableLayout>
         </TableRow>
     </TableLayout>
 
