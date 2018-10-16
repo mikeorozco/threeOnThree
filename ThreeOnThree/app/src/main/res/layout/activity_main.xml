@@ -55,175 +55,152 @@
                 android:id="@+id/textViewTotalPointsT1P1"
                 android:textColor="#5c0404" />
         </TableRow>
-        <!-- 2 pt row begins-->
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <TableLayout>
-                <TableRow>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text=" FG Att (2pt)"
-                        android:id="@+id/textViewFGA2T1P1"
-                        />
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+"
-                        android:id="@+id/buttonFGA2PlusT1P1"
-                        />
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/textViewFGA2TotalT1P1"
-                        android:textAlignment="center"
-                        android:textColor="#5c0404" />
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-"
-                        android:id="@+id/buttonFGA2MinusT1P1"
-                        />
-                </TableRow>
-            </TableLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=" FG Att (2pt)"
+                android:id="@+id/textViewFGA2T1P1"
+                />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/buttonFGA2PlusT1P1"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textViewFGA2TotalT1P1"
+                android:textAlignment="center"
+                android:textColor="#5c0404" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/buttonFGA2MinusT1P1"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="    "
                 />
-            <TableLayout>
-                <TableRow>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text=" FG Made (2pt)"
-                        android:id="@+id/textViewFGM2T1P1"
-                        android:background="#e41d1d"
-                        android:textColor="#ffffff"
-                        />
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+"
-                        android:id="@+id/buttonFGM2PlusT1P1"
-                        android:textColor="#ffffff"
-                        android:backgroundTint="#e41d1d" />
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/textViewFGM2TotalT1P1"
-                        android:textAlignment="center"
-                        android:textColor="#5c0404"
-                        android:autoText="false" />
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-"
-                        android:id="@+id/buttonFGM2MinusT1P1"
-                        android:textColor="#ffffff"
-                        android:singleLine="false"
-                        android:backgroundTint="#e41d1d"
-                        />
-                </TableRow>
-            </TableLayout>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=" FG Made (2pt)"
+                android:id="@+id/textViewFGM2T1P1"
+                android:background="#e41d1d"
+                android:textColor="#ffffff"
+                />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/buttonFGM2PlusT1P1"
+                android:textColor="#ffffff"
+                android:backgroundTint="#e41d1d" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textViewFGM2TotalT1P1"
+                android:textAlignment="center"
+                android:textColor="#5c0404"
+                android:autoText="false" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/buttonFGM2MinusT1P1"
+                android:textColor="#ffffff"
+                android:singleLine="false"
+                android:backgroundTint="#e41d1d" />
         </TableRow>
-        <!-- 3 pt row begins-->
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
-            <TableLayout>
-                <TableRow>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text=" FG Att (3pt)"
-                        android:id="@+id/textViewFGA3T1P1"
-                        />
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+"
-                        android:id="@+id/buttonFGA3PlusT1P1"
-                        />
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/textViewFGA3TotalT1P1"
-                        android:textAlignment="center"
-                        android:textColor="#5c0404" />
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-"
-                        android:id="@+id/buttonFGA3MinusT1P1"
-                        />
-                </TableRow>
-            </TableLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=" FG Att (3pt)"
+                android:id="@+id/textViewFGA3T1P1"
+                />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/buttonFGA3PlusT1P1"
+                />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textViewFGA3TotalT1P1"
+                android:textAlignment="center"
+                android:textColor="#5c0404" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/buttonFGA3MinusT1P1"
+                />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:text="    "
                 />
-            <TableLayout>
-                <TableRow>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text=" FG Made (3pt)"
-                        android:id="@+id/textViewFGM3T1P1"
-                        android:background="#e41d1d"
-                        android:textColor="#ffffff"
-                        />
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="+"
-                        android:id="@+id/buttonFGM3PlusT1P1"
-                        android:textColor="#ffffff"
-                        android:backgroundTint="#e41d1d" />
-                    <TextView
-                        android:layout_width="50dp"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="0"
-                        android:id="@+id/textViewFGM3TotalT1P1"
-                        android:textAlignment="center"
-                        android:textColor="#5c0404" />
-                    <Button
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="-"
-                        android:id="@+id/buttonFGM3MinusT1P1"
-                        android:textColor="#ffffff"
-                        android:backgroundTint="#e41d1d"
-                        />
-                </TableRow>
-            </TableLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text=" FG Made (3pt)"
+                android:id="@+id/textViewFGM3T1P1"
+                android:background="#e41d1d"
+                android:textColor="#ffffff"
+                />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:id="@+id/buttonFGM3PlusT1P1"
+                android:textColor="#ffffff"
+                android:backgroundTint="#e41d1d" />
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="0"
+                android:id="@+id/textViewFGM3TotalT1P1"
+                android:textAlignment="center"
+                android:textColor="#5c0404" />
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:id="@+id/buttonFGM3MinusT1P1"
+                android:textColor="#ffffff"
+                android:backgroundTint="#e41d1d" />
         </TableRow>
-
-        <!-- FT row begins-->
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
