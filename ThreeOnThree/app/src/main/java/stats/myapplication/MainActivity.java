@@ -1,6 +1,7 @@
 package stats.myapplication;
 
 import android.os.Bundle;
+import android.support.annotation.IntegerRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -19,6 +20,10 @@ public class MainActivity extends AppCompatActivity {
     int current3PtMade = 0;
     int currentFTAttempts = 0;
     int currentFTMade = 0;
+    int currentAssists = 0;
+    int currentBlocks = 0;
+    int currentRebounds = 0;
+    int currentSteals = 0;
     int totalPoints = 0;
 
     private final String TAG = "MainActivity class";
@@ -39,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                 attemptsTV.setText(Integer.toString(current2PtAttempts));
             }
         });
-
 
         Button fga2MinusT1P1 = (Button) findViewById(R.id.buttonFGA2MinusT1P1);
         fga2MinusT1P1.setOnClickListener(new View.OnClickListener() {
@@ -64,7 +68,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         Button fgm2MinusT1P1 = (Button) findViewById(R.id.buttonFGM2MinusT1P1);
         fgm2MinusT1P1.setOnClickListener(new View.OnClickListener() {
 
@@ -88,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         Button fga3MinusT1P1 = (Button) findViewById(R.id.buttonFGA3MinusT1P1);
         fga3MinusT1P1.setOnClickListener(new View.OnClickListener() {
 
@@ -104,13 +106,13 @@ public class MainActivity extends AppCompatActivity {
         fgm3PlusT1P1.setOnClickListener(new View.OnClickListener() {
 
             TextView madeTV = (TextView) findViewById(R.id.textViewFGM3TotalT1P1);
-            public void onClick( View v) {
+
+            public void onClick(View v) {
                 current3PtMade += 1;
                 madeTV.setText(Integer.toString(current3PtMade));
                 calcTotalPoints();
             }
         });
-
 
         Button fgm3MinusT1P1 = (Button) findViewById(R.id.buttonFGM3MinusT1P1);
         fgm3MinusT1P1.setOnClickListener(new View.OnClickListener() {
@@ -135,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         Button ftaMinusT1P1 = (Button) findViewById(R.id.buttonFTAMinusT1P1);
         ftaMinusT1P1.setOnClickListener(new View.OnClickListener() {
 
@@ -158,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         Button ftmMinusT1P1 = (Button) findViewById(R.id.buttonFTMMinusT1P1);
         ftmMinusT1P1.setOnClickListener(new View.OnClickListener() {
 
@@ -169,6 +169,99 @@ public class MainActivity extends AppCompatActivity {
                 calcTotalPoints();
             }
         });
+        //------------------------cc---------------------------------------------------------
+        Button assistsPlusT1P1 = (Button) findViewById(R.id.buttonAssistsPlusT1P1);
+        assistsPlusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView assistsTV = (TextView) findViewById(R.id.textViewAssistsTotalT1P1);
+
+            public void onClick(View v) {
+                currentAssists += 1;
+                assistsTV.setText(Integer.toString(currentAssists));
+                //calcAssists();
+            }
+        });
+
+        Button assistsMinusT1P1 = (Button) findViewById(R.id.buttonAssistsMinusT1P1);
+        assistsMinusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView assistsTV = (TextView) findViewById(R.id.textViewAssistsTotalT1P1);
+
+            public void onClick(View v) {
+                currentAssists -= 1;
+                assistsTV.setText(Integer.toString(currentAssists));
+                //calcAssists();
+            }
+        });
+
+        Button blocksPlusT1P1 = (Button) findViewById(R.id.buttonBlocksPlusT1P1);
+        blocksPlusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView blocksTV = (TextView) findViewById(R.id.textViewBlocksTotalT1P1);
+            public void onClick( View v) {
+                currentBlocks += 1;
+                blocksTV.setText(Integer.toString(currentBlocks));
+                //calcBlocks();
+            }
+        });
+
+        Button blocksMinusT1P1 = (Button) findViewById(R.id.buttonBlocksMinusT1P1);
+        blocksMinusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView blocksTV = (TextView) findViewById(R.id.textViewBlocksTotalT1P1);
+            public void onClick( View v) {
+                currentBlocks -= 1;
+                blocksTV.setText(Integer.toString(currentBlocks));
+                //calcBlocks();
+            }
+        });
+
+        //---------------------------------------------------------------------------------
+        Button reboundsPlusT1P1 = (Button) findViewById(R.id.buttonReboundsPlusT1P1);
+        reboundsPlusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView reboundsTV = (TextView) findViewById(R.id.textViewReboundsTotalT1P1);
+
+            public void onClick(View v) {
+                currentRebounds += 1;
+                reboundsTV.setText(Integer.toString(currentRebounds));
+                //calcRebounds();
+            }
+        });
+
+        Button reboundsMinusT1P1 = (Button) findViewById(R.id.buttonReboundsMinusT1P1);
+        reboundsMinusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView reboundsTV = (TextView) findViewById(R.id.textViewReboundsTotalT1P1);
+
+            public void onClick(View v) {
+                currentRebounds -= 1;
+                reboundsTV.setText(Integer.toString(currentRebounds));
+                //calcRebounds();
+            }
+        });
+
+        Button stealsPlusT1P1 = (Button) findViewById(R.id.buttonStealsPlusT1P1);
+        stealsPlusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView stealsTV = (TextView) findViewById(R.id.textViewStealsTotalT1P1);
+            public void onClick( View v) {
+                currentSteals += 1;
+                stealsTV.setText(Integer.toString(currentSteals));
+                //calcSteals();
+            }
+        });
+
+        Button stealsMinusT1P1 = (Button) findViewById(R.id.buttonStealsMinusT1P1);
+        stealsMinusT1P1.setOnClickListener(new View.OnClickListener() {
+
+            TextView stealsTV = (TextView) findViewById(R.id.textViewStealsTotalT1P1);
+            public void onClick( View v) {
+                currentSteals -= 1;
+                stealsTV.setText(Integer.toString(currentSteals));
+                //calcSteals();
+            }
+        });
     }
 
     private void calcTotalPoints() {
@@ -177,6 +270,36 @@ public class MainActivity extends AppCompatActivity {
         TextView totalPointsField = (TextView) findViewById(R.id.textViewTotalPointsT1P1);
         totalPointsField.setText(Integer.toString(totalPoints));
     }
+
+    private void calculateOtherStats() {
+        TextView assists = (TextView) findViewById(R.id.textView);
+        x.setText(Integer.toString(());
+
+        TextView x = (TextView) findViewById(R.id.x);
+        x.setText(Integer.toString(());
+
+        TextView x = (TextView) findViewById(R.id.x);
+        x.setText(Integer.toString(());
+
+        TextView x = (TextView) findViewById(R.id.x);
+        x.setText(Integer.toString(());
+    }
+
+//    private void calcAssists() {
+//
+//    }
+//
+//    private void calcBlocks() {
+//
+//    }
+//
+//    private void calcRebounds() {
+//
+//    }
+//
+//    private void calcSteals() {
+//
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
