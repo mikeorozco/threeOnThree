@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+import java.text.DecimalFormat;
 
 import org.w3c.dom.Text;
 
@@ -42,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 current2PtAttempts += 1;
                 attemptsTV.setText(Integer.toString(current2PtAttempts));
+                updateHeader();
             }
         });
 
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 current2PtAttempts -= 1;
                 attemptsTV.setText(Integer.toString(current2PtAttempts));
+                updateHeader();
             }
         });
 
@@ -64,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 current2PtMade += 1;
                 madeTV.setText(Integer.toString(current2PtMade));
-                calcTotalPoints();
+                current2PtAttempts += 1;
+                updateHeader();
             }
         });
 
@@ -76,7 +80,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 current2PtMade -= 1;
                 madeTV.setText(Integer.toString(current2PtMade));
-                calcTotalPoints();
+                current2PtAttempts -= 1;
+                updateHeader();
             }
         });
 //---------------------------------------------------------------------------------
@@ -88,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 current3PtAttempts += 1;
                 attemptsTV.setText(Integer.toString(current3PtAttempts));
+                updateHeader();
             }
         });
 
@@ -99,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 current3PtAttempts -= 1;
                 attemptsTV.setText(Integer.toString(current3PtAttempts));
+                updateHeader();
             }
         });
 
@@ -110,7 +117,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 current3PtMade += 1;
                 madeTV.setText(Integer.toString(current3PtMade));
-                calcTotalPoints();
+                current3PtAttempts += 1;
+                updateHeader();
             }
         });
 
@@ -121,7 +129,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 current3PtMade -= 1;
                 madeTV.setText(Integer.toString(current3PtMade));
-                calcTotalPoints();
+                current3PtAttempts -= 1;
+                updateHeader();
             }
         });
 
@@ -134,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentFTAttempts += 1;
                 attemptsTV.setText(Integer.toString(currentFTAttempts));
+                updateHeader();
             }
         });
 
@@ -145,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentFTAttempts -= 1;
                 attemptsTV.setText(Integer.toString(currentFTAttempts));
+                updateHeader();
             }
         });
 
@@ -155,7 +166,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 currentFTMade += 1;
                 madeTV.setText(Integer.toString(currentFTMade));
-                calcTotalPoints();
+                currentFTAttempts += 1;
+                updateHeader();
             }
         });
 
@@ -166,7 +178,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 currentFTMade -= 1;
                 madeTV.setText(Integer.toString(currentFTMade));
-                calcTotalPoints();
+                currentFTAttempts -= 1;
+                updateHeader();
             }
         });
         //------------------------cc---------------------------------------------------------
@@ -178,8 +191,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentAssists += 1;
                 assistsTV.setText(Integer.toString(currentAssists));
-                //calcAssists();
-            }
+                updateHeader();            }
         });
 
         Button assistsMinusT1P1 = (Button) findViewById(R.id.buttonAssistsMinusT1P1);
@@ -190,8 +202,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentAssists -= 1;
                 assistsTV.setText(Integer.toString(currentAssists));
-                //calcAssists();
-            }
+                updateHeader();            }
         });
 
         Button blocksPlusT1P1 = (Button) findViewById(R.id.buttonBlocksPlusT1P1);
@@ -201,8 +212,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 currentBlocks += 1;
                 blocksTV.setText(Integer.toString(currentBlocks));
-                //calcBlocks();
-            }
+                updateHeader();            }
         });
 
         Button blocksMinusT1P1 = (Button) findViewById(R.id.buttonBlocksMinusT1P1);
@@ -212,7 +222,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 currentBlocks -= 1;
                 blocksTV.setText(Integer.toString(currentBlocks));
-                //calcBlocks();
+                updateHeader();
             }
         });
 
@@ -225,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentRebounds += 1;
                 reboundsTV.setText(Integer.toString(currentRebounds));
-                //calcRebounds();
+                updateHeader();
             }
         });
 
@@ -237,8 +247,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 currentRebounds -= 1;
                 reboundsTV.setText(Integer.toString(currentRebounds));
-                //calcRebounds();
-            }
+                updateHeader();            }
         });
 
         Button stealsPlusT1P1 = (Button) findViewById(R.id.buttonStealsPlusT1P1);
@@ -248,8 +257,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 currentSteals += 1;
                 stealsTV.setText(Integer.toString(currentSteals));
-                //calcSteals();
-            }
+                updateHeader();            }
         });
 
         Button stealsMinusT1P1 = (Button) findViewById(R.id.buttonStealsMinusT1P1);
@@ -259,31 +267,58 @@ public class MainActivity extends AppCompatActivity {
             public void onClick( View v) {
                 currentSteals -= 1;
                 stealsTV.setText(Integer.toString(currentSteals));
-                //calcSteals();
-            }
+                updateHeader();            }
         });
     }
 
-    private void calcTotalPoints() {
+    private void updateHeader() {
         int totalPoints = 0;
+        int totalFieldGoals = 0;
+        int totalAttempts = 0;
+        int fgPercent = 0;
+        int ftPercent = 0;
+
         totalPoints = (current2PtMade * 2) + (current3PtMade * 3) + currentFTMade;
-        TextView totalPointsField = (TextView) findViewById(R.id.textViewTotalPointsT1P1);
-        totalPointsField.setText(Integer.toString(totalPoints));
+        totalFieldGoals = current2PtMade + current3PtMade;
+        totalAttempts = current2PtAttempts + current3PtAttempts;
+
+        try {
+            fgPercent = (int) 100 * (totalFieldGoals / totalAttempts);
+        } catch (Exception x) {
+            fgPercent = 0;
+        }
+
+        try {
+            ftPercent = (int) 100 * (currentFTMade / currentFTAttempts);
+        } catch (Exception x) {
+            ftPercent = 0;
+        }
+
+        TextView header = (TextView) findViewById(R.id.textViewHeaderT1P1);
+        String headerText = "Pts: " + Integer.toString(totalPoints) +
+                       "   (" + totalFieldGoals + "/" + totalAttempts + "): " + Integer.toString(fgPercent) + "%" +
+                       "   (" + currentFTMade + "/" + currentFTAttempts + "): " + Integer.toString(ftPercent) + "%" +
+                       "   Ast: " + Integer.toString(currentAssists) +
+                       "   Reb: " + Integer.toString(currentRebounds) +
+                       "   Blk: " + Integer.toString(currentBlocks) +
+                       "   Stl: " + Integer.toString(currentSteals);
+
+        header.setText(headerText);
     }
 
-    private void calculateOtherStats() {
-        TextView assists = (TextView) findViewById(R.id.textView);
-        x.setText(Integer.toString(());
-
-        TextView x = (TextView) findViewById(R.id.x);
-        x.setText(Integer.toString(());
-
-        TextView x = (TextView) findViewById(R.id.x);
-        x.setText(Integer.toString(());
-
-        TextView x = (TextView) findViewById(R.id.x);
-        x.setText(Integer.toString(());
-    }
+            //    private void calculateOtherStats() {
+//        TextView assists = (TextView) findViewById(R.id.textView);
+//        x.setText(Integer.toString(());
+//
+//        TextView x = (TextView) findViewById(R.id.x);
+//        x.setText(Integer.toString(());
+//
+//        TextView x = (TextView) findViewById(R.id.x);
+//        x.setText(Integer.toString(());
+//
+//        TextView x = (TextView) findViewById(R.id.x);
+//        x.setText(Integer.toString(());
+//    }
 
 //    private void calcAssists() {
 //
